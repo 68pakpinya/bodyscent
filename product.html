@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สินค้าทั้งหมด — Body Scent</title>
+  <meta name="description" content="น้ำหอมฉีดตัว 30 ml, 100 ml และโรลออน จาก Body Scent เลือกตามอารมณ์กลิ่น">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific: a calmer page title than the home hero */
+    .page-title {
+      font-size: var(--text-xl);
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Body Scent</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html" aria-current="page">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+
+        <div class="section-head section-head--center">
+          <h1 class="page-title">สินค้าทั้งหมด</h1>
+          <span class="rule" aria-hidden="true"></span>
+          <p>น้ำหอมฉีดตัวไซส์ 30 ml และ 100 ml รวมถึงโรลออน เลือกตามอารมณ์กลิ่นที่ต้องการ</p>
+        </div>
+
+        <!-- script.js fills both containers -->
+        <div id="filter-bar" class="filters" role="group" aria-label="กรองตามอารมณ์กลิ่น"></div>
+        <div id="product-list" class="product-grid"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="logo">Body Scent</span>
+      <p>เลือกกลิ่นให้ตรงกับอารมณ์ของคุณในทุกวัน</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สั่งซื้อสินค้า — Body Scent</title>
+  <meta name="description" content="กรอกข้อมูลเพื่อสั่งซื้อสินค้า Body Scent">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific: order form */
+    .page-title {
+      font-size: var(--text-xl);
+      font-weight: 400;
+    }
+
+    .order-wrap {
+      max-width: 34rem;
+      margin-inline: auto;
+    }
+
+    .form-field {
+      margin-bottom: var(--space-4);
+    }
+
+    .form-field label {
+      display: block;
+      margin-bottom: var(--space-1);
+      color: var(--ink);
+      font-size: var(--text-sm);
+      font-weight: 400;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      display: block;
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      font-weight: 300;
+      line-height: 1.7;
+      border: var(--line);
+      border-radius: var(--radius);
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .form-field textarea {
+      resize: vertical;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus {
+      background: #fff;
+      border-color: var(--bronze-deep);
+    }
+
+    .form-hint {
+      margin: var(--space-1) 0 0;
+      color: var(--deep-beige);
+      font-size: var(--text-sm);
+      line-height: 1.7;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3);
+      margin-top: var(--space-5);
+    }
+
+    .form-actions .back-link {
+      color: var(--ink-soft);
+      font-size: var(--text-sm);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.25s;
+    }
+
+    .form-actions .back-link:hover {
+      border-color: var(--bronze);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Body Scent</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+
+        <div class="section-head section-head--center">
+          <h1 class="page-title">สั่งซื้อสินค้า</h1>
+          <span class="rule" aria-hidden="true"></span>
+          <p>กรอกข้อมูลด้านล่าง เราจะติดต่อกลับเพื่อยืนยันคำสั่งซื้อ</p>
+        </div>
+
+        <div class="order-wrap">
+          <form id="orderForm">
+
+            <div class="form-field">
+              <label for="customerName">ชื่อลูกค้า</label>
+              <input type="text" id="customerName" name="customerName" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="contact">เบอร์โทร / Line</label>
+              <input type="text" id="contact" name="contact" autocomplete="tel" required>
+            </div>
+
+            <div class="form-field">
+              <label for="items">รายการสินค้า</label>
+              <textarea id="items" name="items" rows="3" required></textarea>
+              <p class="form-hint">เพิ่มหรือแก้ไขรายการได้ เช่น ระบุจำนวน หากยอดรวมเปลี่ยน โปรดแก้ในช่องจำนวนเงินรวมด้วย</p>
+            </div>
+
+            <div class="form-field">
+              <label for="total">จำนวนเงินรวม (บาท)</label>
+              <input type="text" id="total" name="total" inputmode="numeric" required>
+            </div>
+
+            <div class="form-field">
+              <label for="note">หมายเหตุ</label>
+              <textarea id="note" name="note" rows="3"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn--solid">ยืนยันสั่งซื้อ</button>
+              <a class="back-link" href="product.html">กลับไปเลือกสินค้า</a>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="logo">Body Scent</span>
+      <p>เลือกกลิ่นให้ตรงกับอารมณ์ของคุณในทุกวัน</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

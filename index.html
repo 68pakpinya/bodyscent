@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Body Scent — เลือกกลิ่นให้ตรงกับอารมณ์ของคุณ</title>
+  <meta name="description" content="Body Scent น้ำหอมฉีดตัวและโรลออน 4 อารมณ์กลิ่น สดชื่น หวานละมุน มั่นใจ และโรแมนติก">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific: full-screen hero */
+    .hero {
+      display: flex;
+      align-items: center;
+      min-height: calc(100vh - 4.5rem);
+      min-height: calc(100svh - 4.5rem);
+    }
+    .hero .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero h1 {
+      max-width: 14em;
+      margin-bottom: var(--space-3);
+      font-weight: 400;
+    }
+    @media (max-width: 40rem) {
+      .hero { min-height: calc(100svh - 4rem); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Body Scent</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html" aria-current="page">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>เลือกกลิ่นให้ตรงกับอารมณ์ของคุณในทุกวัน</h1>
+        <span class="rule" aria-hidden="true"></span>
+        <p>น้ำหอมฉีดตัวและโรลออน 4 อารมณ์กลิ่น เริ่มลองได้ในไซส์ 30 ml ราคา 89 บาท</p>
+        <a class="btn" href="product.html">ดูสินค้าทั้งหมด</a>
+      </div>
+    </section>
+
+    <!-- Moods -->
+    <section class="section section--cream" id="moods">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <h2>วันนี้อยากรู้สึกแบบไหน</h2>
+          <span class="rule" aria-hidden="true"></span>
+          <p>เลือกอารมณ์ที่ตรงกับคุณ แล้วดูกลิ่นในกลุ่มนั้นได้ทันที</p>
+        </div>
+
+        <div class="mood-grid">
+
+          <a class="mood-card" href="product.html?mood=fresh" data-mood="fresh">
+            <h3><span class="mood-title">สดชื่น (Fresh)</span></h3>
+            <p>กลิ่นโปร่งเบา สะอาด ปลุกความตื่นตัวให้ทุกช่วงเวลาของวัน รู้สึกสบายตั้งแต่สูดแรก</p>
+          </a>
+
+          <a class="mood-card" href="product.html?mood=sweet" data-mood="sweet">
+            <h3><span class="mood-title">หวานละมุน (Sweet)</span></h3>
+            <p>กลิ่นหวานแผ่วเบา อ่อนโยน น่ารัก ให้ความอบอุ่นสบายใจเหมือนได้กอดตัวเอง</p>
+          </a>
+
+          <a class="mood-card" href="product.html?mood=confident" data-mood="confident">
+            <h3><span class="mood-title">มั่นใจ (Confident)</span></h3>
+            <p>กลิ่นนิ่ง สะอาด ดูดี น่าเชื่อถือ ให้คุณพร้อมเจอทุกคนอย่างเต็มตัว</p>
+          </a>
+
+          <a class="mood-card" href="product.html?mood=romance" data-mood="romance">
+            <h3><span class="mood-title">โรแมนติก (Romance)</span></h3>
+            <p>กลิ่นอบอุ่น น่าหลงใหล หวานอย่างมีเสน่ห์ ทิ้งความประทับใจให้คนจดจำ</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="logo">Body Scent</span>
+      <p>เลือกกลิ่นให้ตรงกับอารมณ์ของคุณในทุกวัน</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
